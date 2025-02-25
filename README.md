@@ -1,6 +1,3 @@
-Claro, aqui está o código Markdown que você pode copiar e salvar como `configuracao.md`:
-
-````markdown
 # Configurando a API do Google Sheets para o Cadastro de Alunos
 
 Este guia passo a passo irá te ajudar a configurar a API do Google Sheets para que o software de cadastro de alunos possa acessar e modificar sua planilha.
