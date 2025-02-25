@@ -7,10 +7,10 @@ from reportlab.lib.pagesizes import letter
 
 # Configuração do Google Sheets API
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
-SERVICE_ACCOUNT_FILE = "cadastro-python-461f38648e3c.json" # Substitua pelo caminho do seu arquivo de credenciais
+SERVICE_ACCOUNT_FILE = "path/to/your/service_account.json" # Substitua pelo caminho do seu arquivo de credenciais
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 gc = gspread.authorize(creds)
-sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/1kTuDghJSJ3Sz7fJKOAaPk4z3Xl36iJMpTvU9mUWFYEI/edit?usp=sharing').sheet1 # Substitua pela URL da sua planilha
+sheet = gc.open_by_url('your_sheet_url').sheet1 # Substitua pela URL da sua planilha
 
 # Interface gráfica
 window = tk.Tk()
