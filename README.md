@@ -76,8 +76,3 @@ pip install gspread google-auth-oauthlib reportlab
 ## 7\. Executando o Software
 
 1.  **Execute o script Python:** Abra um terminal ou prompt de comando, navegue até o diretório do seu script e execute-o com `python seu_script.py`.
-
-Agora seu software deve ser capaz de acessar e modificar a planilha do Google Sheets\!
-
-```
-```
