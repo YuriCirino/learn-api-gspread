@@ -4,13 +4,15 @@ import gspread
 from google.oauth2.service_account import Credentials
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
-
+import os
+from dotenv import load_dotenv, dotenv_values 
+load_dotenv()
 # Configuração do Google Sheets API
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
-SERVICE_ACCOUNT_FILE = "path/to/your/service_account.json" # Substitua pelo caminho do seu arquivo de credenciais
+SERVICE_ACCOUNT_FILE =  os.getenv("SERVICE_ACCOUNT_FILE")# Substitua pelo caminho do seu arquivo de credenciais
 creds = Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 gc = gspread.authorize(creds)
-sheet = gc.open_by_url('your_sheet_url').sheet1 # Substitua pela URL da sua planilha
+sheet = gc.open_by_url(os.getenv("SHEET_URL")).sheet1 # Substitua pela URL da sua planilha
 
 # Interface gráfica
 window = tk.Tk()
